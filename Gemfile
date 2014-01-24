@@ -49,3 +49,6 @@ gem 'devise'
 
 #omniauth
 gem 'omniauth-twitter'
+
+# figaro
+gem 'figaro'
