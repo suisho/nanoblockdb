@@ -6,8 +6,9 @@ class CreateShapes < ActiveRecord::Migration
       t.string :image
       t.integer :long_side_size
       t.integer :short_side_size
-      t.integershort_side_dot_num :long_side_dot_num
-
+      t.integer :long_side_dot_num
+      t.integer :short_side_dot_num
+      
       t.timestamps
     end
   end

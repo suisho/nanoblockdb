@@ -33,7 +33,11 @@
   </div>
   <div class="field">
     <%= f.label :long_side_dot_num %><br>
-    <%= f.text_field :long_side_dot_num %>
+    <%= f.number_field :long_side_dot_num %>
+  </div>
+  <div class="field">
+    <%= f.label :short_side_dot_num %><br>
+    <%= f.number_field :short_side_dot_num %>
   </div>
   <div class="actions">
     <%= f.submit %>

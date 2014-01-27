@@ -11,11 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140127160001) do
+ActiveRecord::Schema.define(version: 20140127160005) do
 
   create_table "colors", force: true do |t|
     t.string   "name",       null: false
     t.string   "code",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "package_contents", force: true do |t|
+    t.integer  "package_id"
+    t.integer  "color_id"
+    t.integer  "shape_id"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "packages", force: true do |t|
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.datetime "purchased_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.string   "model_name"
+    t.string   "amazon_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shapes", force: true do |t|
+    t.string   "name"
+    t.string   "model_name"
+    t.string   "image"
+    t.integer  "long_side_size"
+    t.integer  "short_side_size"
+    t.integer  "long_side_dot_num"
+    t.integer  "short_side_dot_num"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
