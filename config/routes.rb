@@ -14,6 +14,9 @@ Nanoblockdb::Application.routes.draw do
   devise_for :users, :controllers => {
     :omniauth_callbacks => "users/omniauth_callback"
   }
+
+  get 'products/search/ecs' => "products#search_ecs"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

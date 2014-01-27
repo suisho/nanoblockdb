@@ -1,0 +1,17 @@
+<div>
+  <% if @res.present? %>
+    <ul style="list-style: none;">
+      <% @res.items.each do |i| %>
+        <li style="clear: both;">
+          <div style="width: 150px;float: left;text-align:center;">
+            <%= link_to i.get('DetailPageURL') do %>
+              <%= image_tag i.get('SmallImage/URL'), {:style => 'border: none;'} %>
+            <% end %>
+          </div>
+          <div style="width: 150px; float: left;"><%= i.get('ASIN') %></div>
+          <div style="width: 150px; float: left;"><%= i.get('ItemAttributes/Title') %></div>
+        </li>
+      <% end %> 
+    </ul>
+  <% end %>
+</div>

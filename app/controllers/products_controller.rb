@@ -60,6 +60,19 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # Search From Amazon ECS
+  def search_ecs
+    @keyword = params[:keyword].to_s
+    # TODO: デフォルトでnanoblockとつけるのが良いか悪いか悩む所
+    @keyword += ' nanoblock'
+    @res = Amazon::Ecs.item_search(
+      @keyword,
+      :search_index => 'Hobbies',
+      :country => 'jp',
+      :response_group => 'Large'
+    )
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
