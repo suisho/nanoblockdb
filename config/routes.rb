@@ -1,5 +1,6 @@
 Nanoblockdb::Application.routes.draw do
-  get "omniauth_callback/twitter"
+  resources :colors
+  
   root to: "top#index"
   #get "top/index"
   devise_for :users, :controllers => {
