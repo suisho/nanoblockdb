@@ -1,4 +1,6 @@
 Nanoblockdb::Application.routes.draw do
+  resources :shapes
+
   resources :colors
   
   root to: "top#index"

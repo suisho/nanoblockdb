@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  model_name: MyString
+  image: MyString
+  long_side_size: 1
+  short_side_size: 1
+  long_side_dot_num: 
+
+two:
+  name: MyString
+  model_name: MyString
+  image: MyString
+  long_side_size: 1
+  short_side_size: 1
+  long_side_dot_num: 

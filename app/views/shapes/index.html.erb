@@ -1,0 +1,37 @@
+<h1>Listing shapes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model name</th>
+      <th>Image</th>
+      <th>Long side size</th>
+      <th>Short side size</th>
+      <th>Long side dot num</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shapes.each do |shape| %>
+      <tr>
+        <td><%= shape.name %></td>
+        <td><%= shape.model_name %></td>
+        <td><%= shape.image %></td>
+        <td><%= shape.long_side_size %></td>
+        <td><%= shape.short_side_size %></td>
+        <td><%= shape.long_side_dot_num %></td>
+        <td><%= link_to 'Show', shape %></td>
+        <td><%= link_to 'Edit', edit_shape_path(shape) %></td>
+        <td><%= link_to 'Destroy', shape, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shape', new_shape_path %>
