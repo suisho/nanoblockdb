@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140127160005) do
+ActiveRecord::Schema.define(version: 20140127160006) do
 
   create_table "colors", force: true do |t|
-    t.string   "name",       null: false
-    t.string   "code",       null: false
+    t.string   "name",           null: false
+    t.string   "code",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_transparent"
   end
+
+  add_index "colors", ["name"], name: "index_colors_on_name", unique: true
 
   create_table "package_contents", force: true do |t|
     t.integer  "package_id"
@@ -41,9 +44,12 @@ ActiveRecord::Schema.define(version: 20140127160005) do
     t.string   "name"
     t.string   "model_name"
     t.string   "amazon_url"
+    t.string   "unique"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "products", ["model_name"], name: "index_products_on_model_name", unique: true
 
   create_table "shapes", force: true do |t|
     t.string   "name"
@@ -56,6 +62,9 @@ ActiveRecord::Schema.define(version: 20140127160005) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "shapes", ["model_name"], name: "index_shapes_on_model_name", unique: true
+  add_index "shapes", ["name"], name: "index_shapes_on_name", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
