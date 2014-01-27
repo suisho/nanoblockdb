@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20140127160001) do
 
   create_table "colors", force: true do |t|
-    t.string   "name"
-    t.string   "code"
+    t.string   "name",       null: false
+    t.string   "code",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

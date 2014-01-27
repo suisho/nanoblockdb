@@ -2,8 +2,12 @@
 
 one:
   name: red
-  code: "#300"
+  code: "300"
 
 two:
-  name: MyString
-  code: MyString
+  name: foo
+  code: abcdef
+
+uppercase:
+  name: foo
+  code: ABCDEF
