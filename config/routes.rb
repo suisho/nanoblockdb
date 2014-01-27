@@ -1,5 +1,6 @@
 Nanoblockdb::Application.routes.draw do
-  get "top/index"
+  root to: "top#index"
+  #get "top/index"
   devise_for :users, :controllers => {
     :sessions      => "users/sessions",
     :registrations => "users/registrations",
