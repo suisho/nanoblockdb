@@ -43,12 +43,13 @@ ActiveRecord::Schema.define(version: 20140127160006) do
   create_table "products", force: true do |t|
     t.string   "name"
     t.string   "model_name"
-    t.string   "amazon_url"
-    t.string   "unique"
+    t.string   "asin",       null: false
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "products", ["asin"], name: "index_products_on_asin", unique: true
   add_index "products", ["model_name"], name: "index_products_on_model_name", unique: true
 
   create_table "shapes", force: true do |t|
