@@ -55,3 +55,5 @@ gem 'omniauth-twitter'
 
 # figaro
 gem 'figaro'
+
+gem 'amazon-ecs'
