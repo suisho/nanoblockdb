@@ -9,5 +9,5 @@ two:
   code: abcdef
 
 uppercase:
-  name: foo
+  name: baz
   code: ABCDEF

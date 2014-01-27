@@ -6,12 +6,14 @@ one:
   image: MyString
   long_side_size: 1
   short_side_size: 1
-  long_side_dot_num: 
+  long_side_dot_num: 2
+  short_side_dot_num: 2
 
 two:
-  name: MyString
-  model_name: MyString
+  name: MyString2
+  model_name: MyString22
   image: MyString
   long_side_size: 1
   short_side_size: 1
-  long_side_dot_num: 
+  long_side_dot_num: 2
+  short_side_dot_num: 2
