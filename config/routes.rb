@@ -1,4 +1,6 @@
 Nanoblockdb::Application.routes.draw do
+  resources :packages
+
   resources :products
 
   resources :shapes
