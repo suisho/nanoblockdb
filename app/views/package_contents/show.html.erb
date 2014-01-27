@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Package:</strong>
+  <%= @package_content.package_id %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @package_content.color_id %>
+</p>
+
+<p>
+  <strong>Shape:</strong>
+  <%= @package_content.shape_id %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @package_content.count %>
+</p>
+
+<%= link_to 'Edit', edit_package_content_path(@package_content) %> |
+<%= link_to 'Back', package_contents_path %>

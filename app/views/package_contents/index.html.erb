@@ -1,0 +1,33 @@
+<h1>Listing package_contents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Color</th>
+      <th>Shape</th>
+      <th>Count</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @package_contents.each do |package_content| %>
+      <tr>
+        <td><%= package_content.package_id %></td>
+        <td><%= package_content.color_id %></td>
+        <td><%= package_content.shape_id %></td>
+        <td><%= package_content.count %></td>
+        <td><%= link_to 'Show', package_content %></td>
+        <td><%= link_to 'Edit', edit_package_content_path(package_content) %></td>
+        <td><%= link_to 'Destroy', package_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Package content', new_package_content_path %>
