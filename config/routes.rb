@@ -3,10 +3,7 @@ Nanoblockdb::Application.routes.draw do
   root to: "top#index"
   #get "top/index"
   devise_for :users, :controllers => {
-    :sessions      => "users/sessions",
-    :registrations => "users/registrations",
-    :passwords     => "users/passwords",
-    :omniauth_callbacks => "users/omniauth_callbacks"
+    :omniauth_callbacks => "users/omniauth_callback"
   }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
