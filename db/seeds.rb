@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+[Color, Shape].each do |c|
+  yml = File.read("#{Rails.root}/db/seeds/#{c.to_s.tableize}.yml")
+  list = YAML.load(yml)
+  list.each do |r|
+    c.create do |t|
+      r.each do |i, v|
+        unless i == 'locales'
+          t.send "#{i}=", v
+        end
+      end
+    end
+  end
+end
