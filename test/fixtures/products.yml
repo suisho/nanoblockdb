@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  model_name: MyString
+  model_name: 1
   amazon_url: MyString
 
 two:
   name: MyString
-  model_name: MyString
+  model_name: 2
   amazon_url: MyString

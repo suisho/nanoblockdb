@@ -3,11 +3,3 @@
 one:
   name: red
   code: "300"
-
-two:
-  name: foo
-  code: abcdef
-
-uppercase:
-  name: foo
-  code: ABCDEF

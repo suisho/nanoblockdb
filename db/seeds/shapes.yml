@@ -1,0 +1,12 @@
+-
+  name: 2*4
+  model_name: 1/2A
+  long_side_size: 4
+  short_side_size: 2
+-
+  name: 2*1_1
+  model_name: 1/2BO-1
+  long_side_size: 2
+  short_side_size: 1
+  long_side_dot_num: 1
+  short_side_dot_num: 1
