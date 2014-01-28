@@ -1,0 +1,2 @@
+module Products::AmazonHelper
+end
