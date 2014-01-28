@@ -22,7 +22,7 @@ guard 'rspec' do
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
 end
 
-
+=begin
 guard :minitest do
   # with Minitest::Unit
   #watch(%r{^test/(.*)\/?test_(.*)\.rb$})
@@ -48,3 +48,4 @@ guard :minitest do
   # watch(%r{^app/helpers/(.*)\.rb$})     { |m| "test/helpers/#{m[1]}_test.rb" }
   # watch(%r{^app/models/(.*)\.rb$})      { |m| "test/unit/#{m[1]}_test.rb" }
 end
+=end
