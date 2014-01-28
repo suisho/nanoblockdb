@@ -9,7 +9,12 @@
             <% end %>
           </div>
           <div style="width: 150px; float: left;"><%= i.get('ASIN') %></div>
-          <div style="width: 150px; float: left;"><%= i.get('ItemAttributes/Title') %></div>
+          <div style="width: 150px; float: left;"><%= i.get('ItemAttributes/Title') %>
+          <div>
+            
+            <%= t('view.register') %>
+          </div>
+          </div>
         </li>
       <% end %> 
     </ul>
