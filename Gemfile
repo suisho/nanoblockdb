@@ -8,7 +8,13 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
+  gem 'guard-minitest'
   gem 'factory_girl_rails'
+  gem 'terminal-notifier-guard'
+  gem 'guard-bundler'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
