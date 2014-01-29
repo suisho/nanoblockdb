@@ -15,7 +15,7 @@ Nanoblockdb::Application.routes.draw do
     :omniauth_callbacks => "users/omniauth_callback"
   }
 
-  get 'products/amazon/search' => "products/amazon#search"
+  get 'amazon/search' => "products/amazon#search"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
