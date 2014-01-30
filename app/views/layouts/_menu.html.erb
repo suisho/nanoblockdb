@@ -1,1 +1,2 @@
-<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+<%= link_to t('view.menu.search_product'), {:controller => 'products/amazon', :action => 'search'} %>
+<%= link_to t("view.menu.sign_in_with_twitter"), user_omniauth_authorize_path(:twitter) %>

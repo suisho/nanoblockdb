@@ -1,3 +1,6 @@
 ja:
   view:
+    menu:
+      search_products: 商品検索
+      sign_in_with_twitter: Twitterでログイン
     register: 登録
