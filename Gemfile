@@ -64,3 +64,5 @@ gem 'omniauth-twitter'
 gem 'figaro'
 
 gem 'amazon-ecs'
+
+gem 'rails-i18n'
