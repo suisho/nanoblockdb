@@ -12,7 +12,8 @@
           <div style="width: 150px; float: left;"><%= i.get('ItemAttributes/Title') %>
           <div>
             
-            <%= t('view.register') %>
+            <%= link_to t('view.register') , {:controller => 'products/amazon', :action => 'create',
+            :asin => i.get('ASIN') } %>
           </div>
           </div>
         </li>

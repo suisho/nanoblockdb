@@ -1,2 +1,15 @@
 <h1>Products::Amazon#create</h1>
-<p>Find me in app/views/products/amazon/create.html.erb</p>
+<div>
+  <%= image_tag @product.image_url %>
+  <ul>
+    <li>
+      id : <%= @product.id %>
+    </li>
+    <li>
+      name : <%= @product.name %>
+    </li>
+    <li>
+      asin : <%= @product.asin %>
+    </li>
+  </ul>
+</div>
