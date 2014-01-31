@@ -62,4 +62,5 @@ gem 'rails-i18n'
 
 
 source 'https://rails-assets.org'
+gem 'rails-assets-foundation'
 gem 'rails-assets-gumby'
