@@ -54,15 +54,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-#devise
-gem 'devise'
-
-#omniauth
+gem 'devise'            # user model
 gem 'omniauth-twitter'
-
-# figaro
-gem 'figaro'
-
+gem 'figaro'            # (load yml setting)
 gem 'amazon-ecs'
-
 gem 'rails-i18n'
+
+
+source 'https://rails-assets.org'
+gem 'rails-assets-gumby'
