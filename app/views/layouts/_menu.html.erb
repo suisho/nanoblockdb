@@ -1,2 +1,18 @@
-<%= link_to t('view.menu.search_product'), {:controller => 'products/amazon', :action => 'search'} %>
-<%= link_to t("view.menu.sign_in_with_twitter"), user_omniauth_authorize_path(:twitter) %>
+<nav class="navbar">
+  <div class="row">
+    <div class="menu columns ten">
+      <ul>
+        <li>
+          <%= link_to t('view.menu.search_product'), {:controller => 'products/amazon', :action => 'search'} %>
+        </li>
+      </ul>
+    </div>
+    <div class="login-menu columns two">
+      <ul>
+        <li>
+          <%= link_to t("view.menu.sign_in_with_twitter"), user_omniauth_authorize_path(:twitter) %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
