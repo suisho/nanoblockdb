@@ -13,3 +13,15 @@
     </li>
   </ul>
 </div>
+
+<h2>パーツ情報を登録してください</h2>
+
+<%= form_tag('/packages', :method => 'POST') do %>
+  <div id="contents_form_template">
+    <%= collection_select :color, :id, @colors, :id, :name %>
+    <%= collection_select :shape, :id, @shapes, :id, :name %>
+    <%= number_field_tag  :count, :min => 0 %>
+  </div>
+
+  <div><%= submit_tag t("view.register") %></div>
+<% end %>

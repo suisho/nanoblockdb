@@ -14,7 +14,9 @@ class Products::AmazonController < ApplicationController
   
   def create
     @product = create_product
-    pp @product
+    # for form
+    @colors = Color.all
+    @shapes = Shape.all
   end
   
   private
