@@ -16,24 +16,25 @@
 
 <h2>パーツ情報を登録してください</h2>
 
-<%= form_tag('/packages', :method => 'POST') do %>
-  <div id="contents_form_template" class="package_form template">
-    <div class="row">
-      <div class="small-3 columns">
-        <%= collection_select nil, nil, @colors, :id, :name %>
-      </div>
-      <div class="small-3 columns">
-        <%= collection_select nil, nil, @shapes, :id, :name %>
-      </div>
-      <div class="small-3 columns">
-        <input class="text input xnarrow" placeholder="0" type="number" min=0>
-      </div>
-      <div class="small-3 columns operation">
-        <a href="javascript:void(0)" class="button plus">+</a>
-        <a href="javascript:void(0)" class="button minus">-</a>
-      </div>
+<%= form_tag('/packages', :method => 'POST') do |f| %>
+<div id="contents_form_template" class="package_form template">
+  <div class="row">
+    <div class="small-3 columns">
+      <%= collection_select :color, nil,  @colors, :id, :name, {}, { :class =>'color' } %>
+    </div>
+    <div class="small-3 columns">
+      <%= collection_select :shape, nil,  @shapes, :id, :name, {}, { :class =>'shape' } %>
+    </div>
+    <div class="small-3 columns">
+      <input class="text input xnarrow" placeholder="0" type="number" min=0>
+    </div>
+    <div class="small-3 columns operation">
+      <a href="javascript:void(0)" class="button plus">+</a>
+      <a href="javascript:void(0)" class="button minus">-</a>
     </div>
   </div>
+</div>
+<div id="package_form_container" class="package_form"></div>
 
   <div><%= submit_tag t("view.register") %></div>
 <% end %>

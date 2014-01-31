@@ -1,18 +1,19 @@
-<nav class="navbar">
-  <div class="row">
-    <div class="menu columns ten">
-      <ul>
-        <li>
-          <%= link_to t('view.menu.search_product'), {:controller => 'products/amazon', :action => 'search'} %>
-        </li>
-      </ul>
-    </div>
-    <div class="login-menu columns two">
-      <ul>
-        <li>
-          <%= link_to t("view.menu.sign_in_with_twitter"), user_omniauth_authorize_path(:twitter) %>
-        </li>
-      </ul>
-    </div>
-  </div>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">Nanoblock DB</a></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="left">
+      <li>
+        <%= link_to t('view.menu.search_product'), {:controller => 'products/amazon', :action => 'search'} %>
+      </li>
+    </ul>
+    <ul class="right">
+      <li>
+        <%= link_to t("view.menu.sign_in_with_twitter"), user_omniauth_authorize_path(:twitter) %>
+      </li>
+    </ul>
+  </section>
 </nav>
