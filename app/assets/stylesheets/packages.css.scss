@@ -1,3 +1,27 @@
 // Place all the styles related to the packages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*= require foundation */
+@import "colors";
+@import "foundation";
+
+.template{
+  display: none;
+}
+.package_form{
+  .operation{
+    .button{
+      @extend .tiny;
+      @extend .radius;
+    }
+
+    .plus{
+    }
+    .minus{
+      background: $red;
+    }
+  }
+}
+#contents_form_template{
+  display: none;
+}

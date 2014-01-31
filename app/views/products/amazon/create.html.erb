@@ -16,16 +16,22 @@
 
 <h2>パーツ情報を登録してください</h2>
 
-<%= form_tag('/packages', :method => 'POST', :class => "field") do %>
-  <div id="contents_form_template">
-    <div class="picker">
-      <%= collection_select nil, nil, @colors, :id, :name %>
-    </div>
-    <div class="picker">
-      <%= collection_select nil, nil, @shapes, :id, :name %>
-    </div>
-    <div class="field">
-      <input class="text input xnarrow" placeholder="0" type="number" min=0>
+<%= form_tag('/packages', :method => 'POST') do %>
+  <div id="contents_form_template" class="package_form template">
+    <div class="row">
+      <div class="small-3 columns">
+        <%= collection_select nil, nil, @colors, :id, :name %>
+      </div>
+      <div class="small-3 columns">
+        <%= collection_select nil, nil, @shapes, :id, :name %>
+      </div>
+      <div class="small-3 columns">
+        <input class="text input xnarrow" placeholder="0" type="number" min=0>
+      </div>
+      <div class="small-3 columns operation">
+        <a href="javascript:void(0)" class="button plus">+</a>
+        <a href="javascript:void(0)" class="button minus">-</a>
+      </div>
     </div>
   </div>
 
