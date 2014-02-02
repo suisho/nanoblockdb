@@ -136,6 +136,7 @@ GEM
       railties (= 4.0.1)
       sprockets-rails (~> 2.0.0)
     rails-assets-backbone (1.1.0)
+    rails-assets-backbone.stickit (0.7.0)
     rails-assets-fastclick (0.6.11)
     rails-assets-foundation (5.0.3)
       rails-assets-fastclick (~> 0.6.11)
@@ -241,6 +242,7 @@ DEPENDENCIES
   omniauth-twitter
   rails (= 4.0.1)
   rails-assets-backbone
+  rails-assets-backbone.stickit
   rails-assets-foundation
   rails-assets-gumby
   rails-assets-underscore

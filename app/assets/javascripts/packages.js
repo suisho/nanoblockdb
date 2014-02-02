@@ -4,22 +4,34 @@
 
     var Bricks = Backbone.Model.extend({
     })
-
-    var BricksForm = Backbone.View.extend({
+    var BaseBricksFormOperation = Backbone.View.extend({
+      events : {
+        "click .button.plus" : "clickPlus"
+      },
+      clickPlus : function(){
+        FormEvents.trigger("addBricksForm", this.$el)
+      },
+    })
+    var BricksForm = BaseBricksFormOperation.extend({
       className : "bricks",
       model : Bricks,
       events : {
         "click .button.minus" : "remove",
-        "click .button.plus" : "clickPlus"
+        //"click .button.plus" : "clickPlus"
+      },
+      initialize : function(){
+        this.events = _.extend({},
+          BaseBricksFormOperation.prototype.events,
+          this.events)
       },
       remove : function(){
         console.log("remove");
         this.$(":input").attr("disabled", "disabled")
         this.$el.hide()
       },
-      clickPlus : function(){
+/*      clickPlus : function(){
         FormEvents.trigger("addBricksForm", this.$el)
-      },
+      },*/
       render : function(){
         var template = $("#contents_form_template").clone()
         //template.find(".")
@@ -45,13 +57,13 @@
       }
     })
 
-    var PartsFormOperator = Backbone.View.extend({
-      events : {
-        "click .button.plus" : "clickPlus"
+    var PartsFormOperator = BaseBricksFormOperation.extend({
+      initialize : function(){
+        this.events = _.extend({},
+          BaseBricksFormOperation.prototype.events,
+          this.events)
       },
-      clickPlus : function(){
-        FormEvents.trigger("addBricksForm", this.$el)
-      }
+      
     })
 
     // Do Application
