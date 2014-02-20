@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require backbone.stickit/backbone.stickit
 //= require_tree .

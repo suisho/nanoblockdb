@@ -3,7 +3,19 @@
     var FormEvents = _.extend({}, Backbone.Events)
 
     var Bricks = Backbone.Model.extend({
+      validate : function(attrs, opts){
+        if(!$.isNumeric(attrs.count)){
+          return "Count is not numeric"
+        }
+        if(attrs.count < 0){
+          return "Invalid count"
+        }
+      }
     })
+    var BricksCollection = Backbone.Collection.extend({
+      model : Bricks
+    })
+    
     var PartsFormOperator = Backbone.View.extend({
       events : {
         "click .button.plus" : "clickPlus"
@@ -12,12 +24,16 @@
         FormEvents.trigger("addBricksForm", this.$el)
       },
     })
+
     var BricksForm = PartsFormOperator.extend({
       className : "bricks",
-      model : Bricks,
       events : {
         "click .button.minus" : "remove",
-        //"click .button.plus" : "clickPlus"
+      },
+      bindings : {
+        ".color" : "color",
+        ".shape" : "shape",
+        ".count" : "count"
       },
       initialize : function(){
         this.events = _.extend({},
@@ -33,6 +49,7 @@
         var template = $("#contents_form_template").clone()
         //template.find(".")
         this.$el.html(template.html())
+        this.stickit()
         return this
       },
     })
@@ -47,7 +64,9 @@
         })
       },
       addBricksForm : function(template){
-        var opts = {}
+        var opts = {
+          model : new Bricks()
+        }
         var bricksForm = new BricksForm(opts)
         this.$el.append(bricksForm.render().el)
         return bricksForm
