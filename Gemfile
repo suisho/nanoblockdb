@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '~> 4.1.1'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -16,8 +17,6 @@ group :development, :test do
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
 end
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -60,10 +59,10 @@ gem 'figaro'            # (load yml setting)
 gem 'amazon-ecs'
 gem 'rails-i18n'
 
+gem 'bourbon'
+gem 'neat'
 
-source 'https://rails-assets.org'
-gem 'rails-assets-foundation'
-gem 'rails-assets-gumby'
 gem 'rails-assets-underscore'
 gem 'rails-assets-backbone'
 gem 'rails-assets-backbone.stickit'
+gem 'rails-assets-backbone.marionette'
